@@ -113,7 +113,7 @@ export default class Model {
   }
 
   createField() {
-    const texture = this.loader.load("/background.jpg");
+    const texture = this.loader.load("./background.jpg");
 
     this.planeGeometry = new SphereGeometry(10, 32, 32);
     this.planeMaterial = new MeshBasicMaterial({ map: texture, side: DoubleSide, transparent: true });
