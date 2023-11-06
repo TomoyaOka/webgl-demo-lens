@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Fanwood+Text&display=swap");
+body,
+html {
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.p-index-texts {
+  mix-blend-mode: difference;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.p-index-texts h2 {
+  font-size: 40px;
+  font-family: "Fanwood Text", serif;
+  color: #fff;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+
+.p-index-texts p {
+  font-size: 18px;
+  font-family: "Fanwood Text", serif;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.p-index-texts a {
+  text-decoration: underline;
+}
+
+.p-index-copyright {
+  mix-blend-mode: difference;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 14px;
+  font-family: "Fanwood Text", serif;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.p-index__buttons {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  z-index: 10;
+}
+
+.p-index__buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  border: 2px #111 solid;
+  font-family: "Fanwood Text", serif;
+  color: #111;
+  letter-spacing: -0.01em;
+}
+
+.p-index__buttons button.is-active {
+  background: #111;
+  color: #fff;
+  pointer-events: none;
+}
+
+/*------------------
+* Loading_Style
+--------------------*/
+
+.c-loading {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  background: #000;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.c-loading.is-hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c-loading__flex {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.c-loading img {
+  display: block;
+  width: 30px;
+  animation: loop 2s 0s linear infinite;
+}
+
+.c-loading p {
+  font-size: 16px;
+  font-family: "Fanwood Text", serif;
+  color: #fff;
+  letter-spacing: 0.04em;
+}
+
+@keyframes loop {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .p-index-texts {
+    top: 20px;
+    left: 20px;
+  }
+
+  .p-index-texts h2 {
+    font-size: 5.4vw;
+  }
+
+  .p-index-texts p {
+    font-size: 4.5vw;
+  }
+
+  .p-index-copyright {
+    bottom: 20px;
+    right: 20px;
+    font-size: 12px;
+  }
+
+  .p-index__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .p-index__buttons button {
+    width: 80px;
+    height: 30px;
+    font-size: 13px;
+  }
+
+  /*--------------
+  * loading
+  --------------------*/
+  .c-loading img {
+    width: 20px;
+  }
+
+  .c-loading p {
+    font-size: 14px;
+  }
+}
